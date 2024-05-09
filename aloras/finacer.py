@@ -3,9 +3,10 @@ import streamlit as st
 from joblib import load
 
 # Carregar o modelo, o vetorizador e o label encoder
-model = load('random_forest_model.joblib')
+
 vectorizer = load('vectorizer.joblib')
 label_encoder = load('label_encoder.joblib')
+model = load('random_forest_model.joblib')
 
 st.set_page_config(
     page_title="Financeiro Análise",
