@@ -6,7 +6,7 @@ from joblib import load
 
 vectorizer = load('aloras/vectorizer.joblib')
 label_encoder = load('aloras/label_encoder.joblib')
-model = load('random_forest_model.joblib')
+model = load('aloras/random_forest_model.joblib')
 
 
 
