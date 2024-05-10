@@ -4,7 +4,7 @@ from joblib import load
 
 # Carregar o modelo, o vetorizador e o label encoder
 
-vectorizer = load('blob/main/aloras/vectorizer.joblib')
+vectorizer = load('main/aloras/vectorizer.joblib')
 label_encoder = load('financerr/blob/main/aloras/label_encoder.joblib')
 model = load('random_forest_model.joblib')
 
