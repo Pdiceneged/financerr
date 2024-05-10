@@ -6,7 +6,7 @@ from joblib import load
 
 vectorizer = load('aloras/vectorizer.joblib')
 label_encoder = load('aloras/label_encoder.joblib')
-model = load('aloras/random_forest_model.joblib')
+
 
 
 
@@ -23,8 +23,6 @@ if st.button('Prever Natureza'):
     # Vetorizar o input do usuário
     user_input_transformed = vectorizer.transform([user_input])
 
-    # Fazer a predição
-    prediction_encoded = model.predict(user_input_transformed)
 
     # Converter a predição codificada de volta para o nome da categoria
     prediction = label_encoder.inverse_transform(prediction_encoded)
