@@ -3,10 +3,9 @@ import streamlit as st
 from joblib import load
 
 # Carregar o modelo, o vetorizador e o label encoder
-
+model = load('aloras/random_forest_model.joblib')
 vectorizer = load('aloras/vectorizer.joblib')
 label_encoder = load('aloras/label_encoder.joblib')
-model = load('aloras/random_forest_model.joblib')
 
 st.set_page_config(
     page_title="Financeiro Análise",
