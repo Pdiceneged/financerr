@@ -3,9 +3,9 @@ import streamlit as st
 from joblib import load
 
 # Carregar o modelo, o vetorizador e o label encoder
-model = load('aloras/random_forest_model.joblib')
-vectorizer = load('aloras/vectorizer.joblib')
-label_encoder = load('aloras/label_encoder.joblib')
+model = load('random_forest_model.joblib')
+vectorizer = load('vectorizer.joblib')
+label_encoder = load('label_encoder.joblib')
 
 st.set_page_config(
     page_title="Financeiro Análise",
@@ -17,8 +17,8 @@ def get_img_as_base64(file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-img = get_img_as_base64("aloras/pdipaper5.png")
-img2 = get_img_as_base64("aloras/pdiside.png")
+img = get_img_as_base64("pdipaper5.png")
+img2 = get_img_as_base64("pdiside.png")
 
 page_bg_img = f"""
 <style>
@@ -72,7 +72,7 @@ header, footer {{
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.sidebar.image("aloras/Logopdi.png", width=250)
+st.sidebar.image("Logopdi.png", width=250)
 
 
 # Código de estilo e imagem omitido para simplificação
