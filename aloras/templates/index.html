@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro Análise</title>
+    <style>
+        body {
+            background-image: url("data:fundoesg4k/png;base64,{{ img }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            background-color: #f1f1f1;
+            color: #333;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+            padding: 12px 15px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 1em;
+            transition: border 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4A90E2;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #4A90E2;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+
+        .prediction {
+            font-weight: bold;
+            font-size: 1.4em;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Análise de Suprimentos (Financeiro)</h1>
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="Digite o Histórico:" required>
+            <input type="submit" value="Prever Natureza">
+        </form>
+        {% if prediction %}
+            <div class="prediction">A Natureza prevista é: {{ prediction }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
