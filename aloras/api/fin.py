@@ -5,7 +5,7 @@ from joblib import load
 app = Flask(__name__)
 
 # Carregar o modelo, o vetorizador e o label encoder
-model = load('random_forest_model.joblib')
+model = load('/aloras/random_forest_model.joblib')
 vectorizer = load('vectorizer.joblib')
 label_encoder = load('label_encoder.joblib')
 
